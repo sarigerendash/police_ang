@@ -1,5 +1,5 @@
 export interface Product {
     id?:number |any
-    name :string
+    name :string |any
     price: number
 }

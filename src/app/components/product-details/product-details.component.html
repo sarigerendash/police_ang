@@ -1,1 +1,19 @@
-{{product |json}}
+
+<span> {{product?.name |upperCase}} {{product?.price | nis}}</span>
+<button (click)="editProduct()">edit</button><br/>
+<div *ngIf="editFlag">
+    <label>name</label><input #name [value]="product?.name"/>
+    <label>price</label><input #price [value]="product?.price"/>
+    <button (click)="saveProduct(name.value,+price.value)">save</button>
+</div>
+<!-- <div *ngFor="let product of products;">
+    <ul>
+        <li>
+            <button (click)="deleteProduct(product.id)">delete</button>
+            <button (click)="updateProduct(product.id ,name.value,+price.value)">update</button>
+            {{product.name}}
+            {{product.price}}
+        </li>
+    </ul>
+</div> -->
+

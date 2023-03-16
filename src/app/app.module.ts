@@ -7,6 +7,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ProductComponent } from './components/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { NisPipe } from './pipes/nis.pipe';
+import { UpperCasePipe } from './pipes/upper-case.pipe';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     AppComponent,
     NavBarComponent,
     ProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    NisPipe,
+    UpperCasePipe
   ],
   imports: [
     BrowserModule,

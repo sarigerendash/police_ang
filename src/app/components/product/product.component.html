@@ -4,14 +4,5 @@
     <label>price</label><input #price />
 </div>
 <button (click)="addProduct(name.value,+price.value)">add</button>
-<!-- <div *ngFor="let product of products;">
-    <ul>
-        <li>
-            <button (click)="deleteProduct(product.id)">delete</button>
-            <button (click)="updateProduct(product.id ,name.value,+price.value)">update</button>
-            {{product.name}}
-            {{product.price}}
-        </li>
-    </ul>
-</div> -->
-<app-product-details [product]="product"  *ngFor="let product of products;"></app-product-details>
+<br/><br/>
+<app-product-details [product]="product"  *ngFor="let product of products;" (updateProduct)="updateProduct($event)"></app-product-details>

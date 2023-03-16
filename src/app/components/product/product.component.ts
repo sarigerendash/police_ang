@@ -25,7 +25,7 @@ export class ProductComponent implements OnInit {
     deleteProduct( id: number) {
         this._product.deleteProduct(id).subscribe(res => this.getData())
     }
-    updateProduct( id: number ,name: string ,price:number ) {
-        this._product.updateProduct(id , {name,price}).subscribe(res => this.getData())
+    updateProduct( product :Product) {
+        this._product.updateProduct(product.id ,{name:product.name,price:product.price}).subscribe(res => this.getData())
     }
 }
