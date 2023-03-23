@@ -9,6 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { NisPipe } from './pipes/nis.pipe';
 import { UpperCasePipe } from './pipes/upper-case.pipe';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon'
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { UpperCasePipe } from './pipes/upper-case.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    MatMenuModule,
+    MatIconModule                    
   ],
   providers: [],
   bootstrap: [AppComponent]
